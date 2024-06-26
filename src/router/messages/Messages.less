@@ -1,0 +1,27 @@
+.messages-container {
+    .messages-list {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+
+        .messages-wrapper {
+            display: block;
+            width: fit-content;
+
+            .message-content {
+                @bg: #FF7F50;
+
+                color: white;
+                background-color: @bg;
+                border: 1px @bg solid;
+                border-radius: 5px;
+                padding: .2rem;
+                margin-bottom: .3rem;
+                text-align: center;
+                cursor: default;
+            }
+        }
+    }
+}
+
+// background-color: #FFA500;

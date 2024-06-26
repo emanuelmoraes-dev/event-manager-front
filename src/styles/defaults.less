@@ -1,0 +1,26 @@
+.btn-default(@bg, @fg) {
+    background-color: @bg;
+    color: @fg;
+    width: 60px;
+    height: 25px;
+    border: 1px @bg solid;
+    border-radius: 30px;
+
+    &:hover {
+        @newColor: color-mix(in srgb, @bg, white 20%);
+        background-color: @newColor;
+        border-color: @newColor;
+    }
+
+    &:active {
+        @newColor: color-mix(in srgb, @bg, black 20%);
+        background-color: @newColor;
+        border-color: @newColor;
+    }
+
+    &:disabled {
+        @newColor: color-mix(in srgb, @bg, #6C7A89 80%);
+        background-color: @newColor;
+        border-color: @newColor;
+    }
+}
