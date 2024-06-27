@@ -16,9 +16,10 @@ export const Options = () => {
     }
 
     const send = (): void => {
-        messageService.send(newMessage).catch(err => console.error(err))
+        messageService.send(newMessage)
+            .then(() => search())
+            .catch(err => console.error(err))
         setNewMessage('')
-        setTimeout(search, 1000)
     }
 
     const onKeyDownNewMessage = (e: KeyboardEvent<HTMLInputElement>) => {
